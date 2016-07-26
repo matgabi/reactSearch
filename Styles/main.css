@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "untitled-font-1";
+    src:url("../fonts/untitled-font-1.eot");
+    src:url("../fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/untitled-font-1.woff") format("woff"),
+    url("../fonts/untitled-font-1.ttf") format("truetype"),
+    url("../fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+[data-icon]:before {
+    font-family: "untitled-font-1" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "untitled-font-1" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search-plus:before {
+    content: "\61";
+}
+.icon-search:before {
+    content: "\62";
+}
+.icon-search-minus:before {
+    content: "\63";
+}
+.icon-apple:before {
+    content: "\64";
+}
+
+
+
+
+
+
+
+html {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+body {
+    background: url(http://samratcliffe.github.io/images/spotifybg.png) no-repeat;
+    background-size: cover;
+    z-index: -1;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    color: #E9E9E9;
+    opacity: 1;
+    font-family: Consolas;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.5), -3px 3px 30px rgba(0, 0, 0, 0.5);
+    height: 590px;
+}
+
+.widget {
+    position: relative;
+    opacity: 0.9;
+    width: 60%;
+    padding: 18px;
+    background-color: transparent;
+    box-shadow: 1px 1px 10px rgba(256, 256, 256, 0.2), -1px 0px 15px rgba(256, 256, 256, 0.44);
+    margin: 10px;
+    transition: width 0.5s ease-in-out;
+
+}
+
+.widget:hover {
+    width: 93%;
+}
+.widget::before{
+    font-family: untitled-font-1;
+    content: '\62';
+    position: absolute;
+    top:25px;
+    left: 10px;
+    font-size: 25px;
+}
+.widget > input {
+
+    color: #E9E9E9;
+    width: 95%;
+    min-height: 30px;
+    margin-bottom: 20px;
+    border: 0 none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    margin-left: 21px;
+
+}
+
+.folder {
+    margin-left: 10px
+    max-width:100%;
+}
+
+.folder-container {
+    padding: 0 20px;
+    margin: 0 0 0 4px;
+    list-style-type: none;
+}
+
+.folder-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.file-item,
+.folder-item {
+    margin-left: -19px;
+    padding-left: 20px;
+
+    list-style-type: none;
+}
+
+.file-item {
+    margin-left: 4px;
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAsUlEQVQ4T2NkgIKE2q4DMDZW+j+jAgPj//0LmssSkeUZEQZ0/1/QXArnoxuSUNPdwMDIEMDwn2HDgpbSBpg8aQYw/H/PwMCQwMDIMHFBc9kCkCGkGODAwMAAwiBd9TDXYhiQUNtdwPCfgR97ePy7uKClfENCLcK7RLsA2UC8BoADi4HhP44YObigpfTAsHfBgMcC3vwAzze0TAcUuKDrAMN/RlwJCNVcRoaPC5pLA0CCALOMnRHTr6OKAAAAAElFTkSuQmCC') no-repeat left center;
+}
+
+.folder-item {
+    font-weight: bold;
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA6UlEQVQ4T62TvQ3CMBCF31OgDxPACGwATAAjeAOgSKpECgoCiRTABmYDNgA2yAawAUpNwiGHH0GBlATcuPH3vbPvTPy4+COPXKCCpY30sgORPIU6dLtF5FTeYgWgA2KtQ1fnQj8amQ2C81fJVcZ65sZUfhTr0GmrYN5iZjWLpIqwC0oLVjah8hd7WPUBsvQIwC4ieD9zFwgDELuyMCCHuwDcAliWFgg2jwoQgxxWEDzeICfZqSDoPa9QHjZpVq1B5UUnEIXa91GhSKKnrm3mQEqXngNyMNNqBKYD/QqSsQ6d1X8+U4X0F3IDjRRPOikDqHUAAAAASUVORK5CYII=') no-repeat left center;
+}
+
+#search {
+    margin: 0;
+    color: grey;
+    visibility: hidden;
+}
+li:hover {
+    opacity: 0.3;
+}
+
+
+h1:before{
+    content: "\64";
+    font-family: "untitled-font-1";
+
+}
