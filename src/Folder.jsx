@@ -3,11 +3,27 @@
  */
 import React, {Component} from 'react';
 
-class Folder extends Component{
-    render(){
-        return(
-            <li className="folder-item">{this.props.folderName}</li>
+
+class Folder extends Component {
+
+    handleClick(folder) {
+        folder.isCollapsed = !folder.isCollapsed;
+        this.props.rerenderTree();
+
+    }
+    render() {
+
+
+    
+        return (
+            <li className= {"folder-item " + (this.props.folder.isCollapsed ? this.props.folder.isCollapsed : 'false')}
+                onClick={this.handleClick.bind(this,this.props.folder)}
+            >
+                {this.props.folder.name}
+            </li>
+
         );
+      
     }
 }
 

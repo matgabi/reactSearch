@@ -7,6 +7,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
+
 var data = [
     {
         type: "folder",
@@ -59,8 +60,8 @@ var data = [
                 path: "/animals/dog/images",
                 children: [
                     {
-                        type: "file",
-                        name: "dog001.jpg",
+                        type: "folder",
+                        name: "dog001",
                         path: "/animals/cat/images/dog001.jpg",
                         children: [
                             {
@@ -114,4 +115,4 @@ var data = [
         ]
     }
 ];
-ReactDOM.render(<App data={data}/>, document.getElementById('container'));
+ReactDOM.render(<App url='/src/json.js'/>, document.getElementById('container'));

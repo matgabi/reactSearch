@@ -23,7 +23,6 @@ class InputWidget extends Component{
               />
               <p>
                    {
-
                       this.props.input.length ? 'Searching for:' + this.props.input : '' }
               </p>
           </div>
